@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text to Speech</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="home">
+      <div class="container">
+        <!-- navigation bar start -->
+        <div class="navwrapper">
+          <ul class="navigation">
+            <li class="nav">
+              <a href="#home" class="navlink">HOME</a>
+            </li>
+            <li class="nav">
+              <a href="#about" class="navlink">ABOUT</a>
+            </li>
+            <li class="nav">
+              <a href="#contact" class="navlink">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+        <br /><br /><br />
+        <div class="container">
+          <div class="texttospeech">
+            <h1>Text to Speech</h1>
+            <br />
+            <p>Petunjuk Penggunaan:</p>
+            <br />
+            <p>
+              Selamat datang di Website Text to Speech, untuk menggunakan fitur website ini cukup mudah yaitu dengan menggunakan Microphone pada hp, pc atau laptop. Agar mendapatkan peforma lebih baik anda juga bisa menambahkan alat
+              tambahan untuk menunjang kinerja website ini, yaitu dengan menggunakan headset atau earphone yang sensitif terhadap suara. <br />Untuk memulai silahkan tekan tombol "Start".
+            </p>
+            <button id="start" class="button-start">Start</button>
+            <button id="stop" class="button-stop">Stop</button>
+          </div>
+          <div class="box">
+            <p id="result"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="container red">
+        <div class="speechsynthesiser">
+          <h1>Speech synthesiser</h1>
+          <br />
+          <br />
+          <p>Petunjuk Penggunaan:</p>
+          <br />
+          <p>Masukkan beberapa teks pada input di bawah dan tekan return atau tombol "play" untuk mendengarnya. mengubah suara menggunakan menu tarik-turun.</p>
+          <br />
+          <form>
+            <label for="txt">Masukan Text</label>
+            <input id="txt" type="text" class="txt" />
+            <div class="kecepatan">
+              <label for="rate">Kecepatan</label><input type="range" min="0.5" max="2" value="1" step="0.1" id="rate" />
+              <div class="rate-value">1</div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="getaran">
+              <label for="pitch">Getaran</label><input type="range" min="0" max="2" value="1" step="0.1" id="pitch" />
+              <div class="pitch-value">1</div>
+              <div class="clearfix"></div>
+            </div>
+            <select></select>
+            <div class="controls">
+              <button id="play" type="submit">Play</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="container blue">
+        <div class="contentwrapper">
+          <h1>CONTACT</h1>
+        </div>
+      </div>
+    </section>
+
+    <div class="top" onclick="goToTop()">⬆</div>
+    <script>
+      const goToTop = () => {
+        return (location.href = "#home");
+      };
+    </script>
+    <script src="main.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
